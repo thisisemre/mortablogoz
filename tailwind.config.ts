@@ -12,6 +12,17 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        look: {
+          "0%, 100%": { transform: "translate(-50%, -50%)" },
+          "25%": { transform: "translate(-25%, -50%)" },
+          "50%": { transform: "translate(-50%, -25%)" },
+          "75%": { transform: "translate(-75%, -50%)" },
+        },
+      },
+      animation: {
+        "look": "look 4s infinite",
+      },
     },
   },
   plugins: [],

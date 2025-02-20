@@ -25,9 +25,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex flex-col overflow-hidden`}
       >
-        {children}
+        <header className="bg-purple-900 p-4">
+          <div className="flex items-center justify-between max-w-7xl mx-auto">
+            <a className="text-white" href="/"> Ana Sayfa</a>
+          </div>
+        </header>
+        <main className="flex-grow overflow-auto">
+          <div className="h-full">
+            {children}
+          </div>
+        </main>
+        <footer className="bg-purple-900 text-white py-6">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-between items-center">
+              <div>
+                <p>&copy; 2024 Mortablogoz. Tüm hakları saklıdır.</p>
+              </div>
+              <div>
+                <a href="/" className="hover:text-gray-300 mr-4">Ana Sayfa</a>
+                <a href="/blog" className="hover:text-gray-300 mr-4">Blog</a>
+                <a href="/iletisim" className="hover:text-gray-300">İletişim</a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
