@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,7 +30,7 @@ export default function RootLayout({
       >
         <header className="bg-purple-900 p-4">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
-            <a className="text-white" href="/"> Ana Sayfa</a>
+            <Link className="text-white" href="/"> Ana Sayfa</Link>
           </div>
         </header>
         <main className="flex-grow overflow-auto">
@@ -44,9 +45,9 @@ export default function RootLayout({
                 <p>&copy; 2024 Mortablogoz. Tüm hakları saklıdır.</p>
               </div>
               <div>
-                <a href="/" className="hover:text-gray-300 mr-4">Ana Sayfa</a>
-                <a href="/blog" className="hover:text-gray-300 mr-4">Blog</a>
-                <a href="/iletisim" className="hover:text-gray-300">İletişim</a>
+                <Link href="/" className="hover:text-gray-300 mr-4">Ana Sayfa</Link>
+                <Link href="/blog" className="hover:text-gray-300 mr-4">Blog</Link>
+                <Link href="/iletisim" className="hover:text-gray-300">İletişim</Link>
               </div>
             </div>
           </div>
